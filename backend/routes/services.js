@@ -8,7 +8,6 @@ const { services } = require('../models/models')
 
 //GET 10 most recent services
 router.get('/', (req, res, next) => {
-  const org = req.user.org;
   services
     .find({ org: org }, (error, data) => {
       if (error) {
